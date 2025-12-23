@@ -1,6 +1,19 @@
 # iOS Mount GUI
 
-Browse files from iOS apps on your Linux desktop.
+Browse files from iOS apps on your Linux desktop build using ifuse.
+
+
+## Usage
+
+### Option 1: AppImage (Easy)
+
+DOwnload the latest `iOS-Mount-GUI-x86_64.AppImage` from Releases:
+```bash
+chmod +x iOS-Mount-GUI-x86_64.AppImage
+./iOS-Mount-GUI-x86_64.AppImage
+```
+
+### Option 2: Python DIY (Advanced)
 
 ## Installation
 
@@ -12,14 +25,6 @@ sudo pacman -S libimobiledevice-tools fuse3
 sudo apt-get install libimobiledevice-utils libfuse-dev fuse3
 ```
 
-## Usage
-
-### Option 1: AppImage (Easy)
-```bash
-./iOS-Mount-GUI-x86_64.AppImage
-```
-
-### Option 2: Python
 ```bash
 cd ios_mount_gui
 python3 main.py
