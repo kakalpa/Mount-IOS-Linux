@@ -1,0 +1,26 @@
+# Build and environment
+.venv/
+venv/
+env/
+*.egg-info/
+__pycache__/
+*.pyc
+.Python
+build/
+dist/
+
+# AppImage build (will be in releases)
+AppImage-build/
+*.AppImage
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+.AppleDouble
+.LSOverride
+*.pyo

@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ios-mount-gui"
+version = "2.0.0"
+description = "Professional iOS device browser - Mount and explore device files and app documents"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "flask>=2.0.0",
+    "pywebview>=4.0.0",
+    "customtkinter>=5.0.0"
+]
+
+[tool.setuptools]
+packages = ["backend"]
+
+[project.scripts]
+ios-mount-gui = "run:main"

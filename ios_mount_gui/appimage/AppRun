@@ -1,0 +1,16 @@
+#!/bin/bash
+# AppRun script for iOS Mount GUI
+
+# Get the directory where the AppImage is mounted
+APPDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Set library paths to include bundled libraries
+export LD_LIBRARY_PATH="$APPDIR/usr/lib:$APPDIR/usr/lib64:$LD_LIBRARY_PATH"
+export PATH="$APPDIR/usr/bin:$PATH"
+
+# Pass APPDIR to the Python wrapper so it knows where bundled packages are
+export APPDIR
+
+# Run via Python wrapper which will set up sys.path correctly
+cd "$APPDIR/usr/share/ios-mount-gui"
+exec python3 wrapper.py "$@"

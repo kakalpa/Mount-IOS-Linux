@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=iOS Mount GUI
+Comment=Mount iOS devices on Linux
+Exec=ios-mount-gui
+Icon=ios-mount-gui
+Categories=Utility;
+
